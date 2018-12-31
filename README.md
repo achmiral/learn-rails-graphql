@@ -1,24 +1,34 @@
-# README
+# Learn Ruby on Rails Graphql
+Source : Dev.to post - [GraphQL Ruby(Class-based API)](https://dev.to/ksato1995/graphql-rubyclass-based-api-523n)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Setup
+```bash
+$ git clone git@github.com:achmiral/learn-rails-graphql.git
+$ cd learn-rails-graphql
+$ bundle install
+$ rails db:migrate
+```
+# Query and Mutation
+### Get All Post
+```graphql
+{
+  post{
+    id
+    title
+    description
+    comments
+  }
+}
+```
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Get Single Post
+```graphql
+{
+  post(id:1){
+    id
+    title
+    description
+    comments
+  }
+}
+```
